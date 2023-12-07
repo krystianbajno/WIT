@@ -80,7 +80,7 @@ Przedział ufności (confidence interval) i przedział predykcji (prediction int
 
 ----------
 # GPT
-### Przykład Zadania na Kolokwium:
+### Przykład Zadania:
 
 1. **Przedział Ufności (Confidence Interval):**
     
