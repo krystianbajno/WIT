@@ -63,7 +63,7 @@ plot(model2$residuals)
 # Durbin-Watson
 dwtest(model2)
 
-# DW = 1.5691, co wskazuje na lekką pozytywną autokorelację pomiędzy resztami
+# DW = 1.5691, co wskazuje na pozytywną autokorelację pomiędzy resztami
 # Jednakże, p-value = 0.2977 co wskazuje na nieistotność wyniku
 cor(x1, x2)
 
