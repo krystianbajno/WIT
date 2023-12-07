@@ -29,24 +29,26 @@ coef(model1)
 summary(model1)
 
 # Wyraz wolny jest nieistotny w modelu (p-value > 0.05)
----
-
+# ---
+  
 model2 = lm(y ~ 0 + x1 + x2)
 
-# Y = 0 + 1.693011 * x1 + 18.579923 * x2 + epsilon
+# Y = 0 + 1.780676 * x1 + 19.297304 * x2 + epsilon
 coef(model2)
 
 # Dopasowanie modelu
 summary(model2)$sigma
+# 42.63909 <- to dość duża wartość świadcząca o możliwym niedopasowaniu modelu
 
 100*(summary(model2)$sigma)/mean(y)
 # 10 % error rate
 
 # R^2
 summary(model2)$r.squared
-# 0.9921772
+# 0.9921772 - dobre dopasowanie
 
 summary(model2)$fstatistic
+# 507.3268 - dobre dopasowanie
 
 summary(model2)
 
@@ -54,15 +56,15 @@ summary(model2)
 
 # Test Shapiro-Wilka
 shapiro.test(model2$residuals)
-# p-value > 0.05
+# p-value = 0.9208 > 0.05
 # Reszty nie podążają za rozkładem normalnym, to dobrze
 
 # Test Goldfelda-Quandta
 # p-value = 0.4059 brak podstaw że wariancja reszt nie jest stała, więc 
-# przyjmujemy, że jest stała
+# przyjmujemy, że jest stała (homoskedastycznosc)
 gqtest(model2)
 
-# Losowość reszt wizualnie
+# Losowość reszt - wizualnie wygląda jak chmura punktów
 plot(model2$residuals)
 
 # Test niezależności reszt
