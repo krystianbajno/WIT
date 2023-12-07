@@ -62,7 +62,7 @@ shapiro.test(model2$residuals)
 # przyjmujemy, że jest stała
 gqtest(model2)
 
-# Losowość reszt wizualnie graficzna
+# Losowość reszt wizualnie
 plot(model2$residuals)
 
 # Test niezależności reszt
