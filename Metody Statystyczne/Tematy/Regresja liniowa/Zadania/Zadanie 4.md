@@ -72,7 +72,7 @@ dwtest(model2)
 # DW = 1.5691, co wskazuje na pozytywną autokorelację pomiędzy resztami
 # Jednakże, p-value = 0.2977 co wskazuje na nieistotność wyniku
 
-# Podaj przewidyhwaną wartość domu o powierzchni 160m^2 położonego w odległości 3 km od centrum miasta
+# Podaj przewidywaną wartość domu o powierzchni 160m^2 położonego w odległości 3 km od centrum miasta
 predict(model2, list(x1=160, x2=3))
 
 # 342.8
