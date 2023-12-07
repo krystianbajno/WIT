@@ -48,6 +48,7 @@ summary(model2)
 
 # Test Shapiro-Wilka
 shapiro.test(model2$residuals)
+# p-value > 0.05
 # Reszty nie podążają za rozkładem normalnym, to dobrze
 
 # Test Goldfelda-Quandta
