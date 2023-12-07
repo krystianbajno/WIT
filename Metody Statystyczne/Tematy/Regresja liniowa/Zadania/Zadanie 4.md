@@ -30,6 +30,7 @@ model2 = lm(y ~ 0 + x1 + x2)
 # Y = 20.837608 + 1.693011 * x1 + 18.579923 * x2 + epsilon
 coef(model2)
 
+# Dopasowanie modelu
 summary(model2)$sigma
 
 100*(summary(model2)$sigma)/mean(y)
@@ -68,9 +69,9 @@ cor(x1, x2)
 # 0.2604269 jest słaba korelacja pomiędzy resztami
 
 # Podaj przewidyhwaną wartość domu o powierzchni 160m^2 położonego w odległości 3 km od centrum miasta
-predict(model2, list(x1=40, x2=3))
+predict(model2, list(x1=160, x2=3))
 
-# 129.1189 
+# 342.8
 
-# Przewidywana wartość domu to 129 119 dolarów
+# Przewidywana wartość domu to 342 800 dolarów
 ```
