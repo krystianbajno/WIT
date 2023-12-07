@@ -19,7 +19,7 @@ x2 <- c(5.6, 1.2, 2.4, 7.2, 2.9, 2.5, 5.5, 4.8, 1.6, 5.0)
 
 cor(x1, x2)
 
-# Niska wartość korelacji reszt
+# Niska wartość korelacji zmiennych
 
 model1 = lm(y ~ x1 + x2)
 
@@ -65,9 +65,6 @@ dwtest(model2)
 
 # DW = 1.5691, co wskazuje na pozytywną autokorelację pomiędzy resztami
 # Jednakże, p-value = 0.2977 co wskazuje na nieistotność wyniku
-cor(x1, x2)
-
-# 0.2604269 jest słaba korelacja pomiędzy resztami
 
 # Podaj przewidyhwaną wartość domu o powierzchni 160m^2 położonego w odległości 3 km od centrum miasta
 predict(model2, list(x1=160, x2=3))
