@@ -19,7 +19,7 @@ x2 <- c(5.6, 1.2, 2.4, 7.2, 2.9, 2.5, 5.5, 4.8, 1.6, 5.0)
 
 cor(x1, x2)
 
-# Niska wartość korelacji zmiennych
+# Niska wartość korelacji zmiennych niezależnych ze sobą
 
 model1 = lm(y ~ x1 + x2)
 
