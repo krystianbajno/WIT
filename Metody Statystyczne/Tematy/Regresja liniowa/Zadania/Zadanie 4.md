@@ -23,11 +23,17 @@ cor(x1, x2)
 
 model1 = lm(y ~ x1 + x2)
 
+# Y = 20.837608 + 1.693011 * x1 + 18.579923 * x2 + epsilon
+coef(model1)
+
 summary(model1)
+
+# Wyraz wolny jest nieistotny w modelu (p-value > 0.05)
+---
 
 model2 = lm(y ~ 0 + x1 + x2)
 
-# Y = 20.837608 + 1.693011 * x1 + 18.579923 * x2 + epsilon
+# Y = 0 + 1.693011 * x1 + 18.579923 * x2 + epsilon
 coef(model2)
 
 # Dopasowanie modelu
